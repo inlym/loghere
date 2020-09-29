@@ -1,0 +1,9 @@
+# Logs
+logs
+*.log
+
+# macOS self gave
+.DS_Store
+
+# Local test
+local-test/
