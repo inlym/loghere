@@ -99,9 +99,9 @@
 		"no-process-env": "off",
 		"no-process-exit": "error",
 
-		"array-bracket-newline": ["error", "always"],
-		"array-bracket-spacing": ["error", "always"],
-		"array-element-newline": ["error", "always"],
+		"array-bracket-newline": ["error", "consistent"],
+		"array-bracket-spacing": ["error", "never"],
+		"array-element-newline": ["error", "consistent"],
 		"block-spacing": ["error", "always"],
 		"brace-style": ["error", "1tbs"],
 		"camelcase": "error",
@@ -141,8 +141,9 @@
 			"error",
 			{
 				"beforeBlockComment": true,
+				"beforeLineComment": true,
 				"afterBlockComment": false,
-				"beforeLineComment": true
+				"allowBlockStart": true
 			}
 		],
 		"lines-between-class-members": ["error", "always"],
