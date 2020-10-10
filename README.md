@@ -15,5 +15,18 @@ npm i loghere
 ```
 const loghere = require('loghere')    // 引用
 const logger = loghere.getLogger()    // 获取日志实例
-logger.log('这是日志内容')              // 打日志
+logger.level = 'debug'				  // 设置日志等级
+logger.debug('这是日志内容')            // 打日志
 ```
+
+## 日志等级
+包含以下日志等级：
+1. ALL (默认)
+2. TRACE
+3. DEBUG
+4. INFO
+5. WARN
+6. ERROR
+7. FATAL
+8. MARK
+9. OFF
