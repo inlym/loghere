@@ -1,14 +1,9 @@
-'use strict'
-
 /**
- * 将 0 至 9 的数字前补零，输出为字符串，例如 00,01,...,09
- * @param {number} n
+ * 将 0 至 9 的数字前补零，输出为字符串，例如 00,01,...,09 *
+ * @deprecated
+ * using `padStart(2, '0')` instead
  */
-function zerofill(n) {
-	if (typeof n !== 'number') {
-		throw new Error('参数 n 应该是一个数字')
-	}
-
+function zerofill(n: number) {
 	const SMALLEST_SINGLE_DIGIT = 0
 	const LARGEST_SINGLE_DIGIT = 9
 
@@ -19,13 +14,13 @@ function zerofill(n) {
 	return n.toString()
 }
 
-module.exports = class Time extends Date {
+export default class Time extends Date {
 	constructor() {
 		super()
 	}
 
 	getFullYear() {
-		return super.getFullYear().toString()
+		return super.getFullYear()
 	}
 
 	getFullMonth() {
@@ -48,7 +43,11 @@ module.exports = class Time extends Date {
 		return zerofill(this.getSeconds())
 	}
 
-	/** 得到格式化的时间格式，格式示例： 2020-10-10 15:30:34 */
+	/**
+	 * 得到格式化的时间格式
+	 *
+	 * @description 格式示例： 2020-10-10 15:30:34
+	 */
 	getFormattedTime() {
 		const formatted = `${this.getFullYear()}-${this.getFullMonth()}-${this.getFullDay()} ${this.getFullHour()}:${this.getFullMinute()}:${this.getFullSecond()}`
 
