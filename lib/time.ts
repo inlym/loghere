@@ -24,7 +24,7 @@ export default class Time extends Date {
 	}
 
 	getFullMonth() {
-		return zerofill(this.getMonth())
+		return zerofill(this.getMonth() + 1)
 	}
 
 	getFullDay() {
