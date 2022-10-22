@@ -27,8 +27,8 @@ export default class Time extends Date {
 		return zerofill(this.getMonth() + 1)
 	}
 
-	getFullDay() {
-		return zerofill(this.getUTCDay())
+	getFullDate() {
+		return zerofill(this.getDate())
 	}
 
 	getFullHour() {
@@ -49,7 +49,7 @@ export default class Time extends Date {
 	 * @description 格式示例： 2020-10-10 15:30:34
 	 */
 	getFormattedTime() {
-		const formatted = `${this.getFullYear()}-${this.getFullMonth()}-${this.getFullDay()} ${this.getFullHour()}:${this.getFullMinute()}:${this.getFullSecond()}`
+		const formatted = `${this.getFullYear()}-${this.getFullMonth()}-${this.getFullDate()} ${this.getFullHour()}:${this.getFullMinute()}:${this.getFullSecond()}`
 
 		return formatted
 	}
