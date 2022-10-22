@@ -1,10 +1,10 @@
 {
 	"name": "loghere",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "可以在 PM2 和 Serverless 中使用的一款简易日志工具",
-	"main": "index.js",
+	"main": "build/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "rm -rf ./build && tsc"
 	},
 	"repository": {
 		"type": "git",
@@ -15,5 +15,9 @@
 	"bugs": {
 		"url": "https://github.com/inlym/loghere/issues"
 	},
-	"homepage": "https://github.com/inlym/loghere#readme"
+	"homepage": "https://github.com/inlym/loghere#readme",
+	"devDependencies": {
+		"@types/node": "^8",
+		"typescript": "~4.8.4"
+	}
 }

@@ -108,3 +108,6 @@ dist
 
 # Local test
 local-test/
+
+# IDE workspace
+.idea
