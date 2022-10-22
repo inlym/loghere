@@ -16,10 +16,10 @@ class Time extends Date {
         return super.getFullYear();
     }
     getFullMonth() {
-        return zerofill(this.getMonth());
+        return zerofill(this.getMonth() + 1);
     }
-    getFullDay() {
-        return zerofill(this.getUTCDay());
+    getFullDate() {
+        return zerofill(this.getDate());
     }
     getFullHour() {
         return zerofill(this.getHours());
@@ -31,7 +31,7 @@ class Time extends Date {
         return zerofill(this.getSeconds());
     }
     getFormattedTime() {
-        const formatted = `${this.getFullYear()}-${this.getFullMonth()}-${this.getFullDay()} ${this.getFullHour()}:${this.getFullMinute()}:${this.getFullSecond()}`;
+        const formatted = `${this.getFullYear()}-${this.getFullMonth()}-${this.getFullDate()} ${this.getFullHour()}:${this.getFullMinute()}:${this.getFullSecond()}`;
         return formatted;
     }
 }
